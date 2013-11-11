@@ -11,3 +11,5 @@ coffeescript
 bootstrap-3
 collection-hooks
 timeago
+accounts-password
+accounts-ui-bootstrap-3
