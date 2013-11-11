@@ -2,3 +2,8 @@
 .navbar-static-top {
   margin-bottom: 19px;
 }
+
+h2 {
+	text-align: center;
+	font-size: 1.7em;
+}
