@@ -1,0 +1,14 @@
+<template name="course">
+  <h2>Course Conditions</h2>
+  <ul class="list-group">
+    {{#each conditions}}
+    <li class="list-group-item">
+      <p>
+        <small class="text-muted pull-right">{{time_ago_in_words}}</small>
+        <strong>{{users_email}}</strong>
+        <span class="clearfix">{{notes}}</span>
+      </p>
+    </li>
+  {{/each}}
+  </ul>
+</template>

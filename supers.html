@@ -8,46 +8,22 @@
 
   <div class="container">
     {{#if currentUser}}
-    <a class="btn btn-primary">+ New Note</a>
-    {{> course}}
+      {{> new}}
+      {{> course}}
     {{else}}
-    <h1>Sign up to continue</h1>
+      <h1>Sign up to continue</h1>
     {{/if}}
   </div>
 </body>
 
-<template name="navigation">
-  <div class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Supers</a>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          {{loginButtons}}
-        </ul>
+<template name="new">
+  <form class="form-horizontal" role="form" id="new_condition">
+    <div class="form-group">
+      <label class="sr-only" for="new_condition_note">New conditions note</label>
+      <div class="col-sm-10">
+        <textarea class="form-control" rows="2" id="new_condition_note"></textarea>
       </div>
     </div>
-  </div>
-</template>
-
-<template name="course">
-  <h2>Course Conditions</h2>
-  <ul class="list-group">
-    {{#each conditions}}
-    <li class="list-group-item">
-      <p>
-        <small class="text-muted pull-right">{{time_ago_in_words}}</small>
-        <strong>Username</strong>
-        <span class="clearfix">{{notes}}</span>
-      </p>
-    </li>
-  {{/each}}
-  </ul>
+    <button type="submit" class="btn btn-default">+ New Note</button>
+  </form>
 </template>
